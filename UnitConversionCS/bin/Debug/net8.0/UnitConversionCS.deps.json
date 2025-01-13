@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "UnitConversionCS/1.0.0": {
+        "runtime": {
+          "UnitConversionCS.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UnitConversionCS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
