@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "b46Vs5f70tLq4FVnnFHLtxhA+YLmUYM4S/jFSM23AuQ=",
+  "Hash": "MoJHkkvgcWfjtrQMOkNn1g5CT73l1DaKTlHBorD4HRM=",
   "Source": "UnitConversionCS",
   "BasePath": "_content/UnitConversionCS",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\vener\\source\\repos\\UnitConversionCS\\UnitConversionCS\\wwwroot\\css\\styles.css",
+      "SourceId": "UnitConversionCS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vener\\source\\repos\\UnitConversionCS\\UnitConversionCS\\wwwroot\\",
+      "BasePath": "_content/UnitConversionCS",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
     },
     {
       "Identity": "C:\\Users\\vener\\source\\repos\\UnitConversionCS\\UnitConversionCS\\wwwroot\\favicon.ico",
