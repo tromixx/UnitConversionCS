@@ -4,39 +4,45 @@
     ViewData["Title"] = "Unit Conversion";
 }
 
-<h2>Unit Conversion</h2>
+<div class="container">
+    <h2 class="title">Unit Conversion</h2>
 
-<form method="post">
-    <div>
-        <label>Input Value:</label>
-        <input type="number" asp-for="InputValue" required />
-    </div>
-    <div>
-        <label>Input Unit:</label>
-        <select asp-for="InputUnit">
-            <option value="Fahrenheit">Fahrenheit</option>
-            <option value="Celsius">Celsius</option>
-            <option value="Kelvin">Kelvin</option>
-            <option value="Rankine">Rankine</option>
-        </select>
-    </div>
-    <div>
-        <label>Target Unit:</label>
-        <select asp-for="TargetUnit">
-            <option value="Fahrenheit">Fahrenheit</option>
-            <option value="Celsius">Celsius</option>
-            <option value="Kelvin">Kelvin</option>
-            <option value="Rankine">Rankine</option>
-        </select>
-    </div>
-    <div>
-        <label>Student Response:</label>
-        <input type="text" asp-for="StudentResponse" required />
-    </div>
-    <button type="submit">Submit</button>
-</form>
+    <form method="post" class="form">
+        <div class="form-group">
+            <label for="inputValue">Input Value:</label>
+            <input type="number" asp-for="InputValue" id="inputValue" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="inputUnit">Input Unit:</label>
+            <select asp-for="InputUnit" id="inputUnit" class="form-control">
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Celsius">Celsius</option>
+                <option value="Kelvin">Kelvin</option>
+                <option value="Rankine">Rankine</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="targetUnit">Target Unit:</label>
+            <select asp-for="TargetUnit" id="targetUnit" class="form-control">
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Celsius">Celsius</option>
+                <option value="Kelvin">Kelvin</option>
+                <option value="Rankine">Rankine</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="studentResponse">Student Response:</label>
+            <input type="text" asp-for="StudentResponse" id="studentResponse" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 
-@if (!string.IsNullOrEmpty(Model.Result))
-{
-    <p>Result: <strong>@Model.Result</strong></p>
-}
+    @if (!string.IsNullOrEmpty(Model.Result))
+    {
+        <div class="result">
+            <p>Result: <strong>@Model.Result</strong></p>
+        </div>
+    }
+</div>
+
+<link rel="stylesheet" href="css/styles.css">
