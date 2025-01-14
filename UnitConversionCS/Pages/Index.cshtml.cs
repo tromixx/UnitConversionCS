@@ -1,20 +1,32 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using UnitConversionApp.Services;
 
-namespace UnitConversionCS.Pages
+namespace UnitConversionApp.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        [BindProperty] public double InputValue { get; set; }
+        [BindProperty] public string InputUnit { get; set; }
+        [BindProperty] public string TargetUnit { get; set; }
+        [BindProperty] public string StudentResponse { get; set; }
+        public string Result { get; set; }
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public void OnPost()
         {
-            _logger = logger;
-        }
-
-        public void OnGet()
-        {
-
+            var correctValue = ConversionService.Convert(InputValue, InputUnit, TargetUnit);
+            if (correctValue == null)
+            {
+                Result = "Invalid";
+            }
+            else if (double.TryParse(StudentResponse, out var studentResponse))
+            {
+                Result = ConversionService.ValidateResponse((double)correctValue, studentResponse) ? "Correct" : "Incorrect";
+            }
+            else
+            {
+                Result = "Invalid";
+            }
         }
     }
 }
