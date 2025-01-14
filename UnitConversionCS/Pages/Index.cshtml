@@ -1,10 +1,42 @@
 ﻿@page
-@model IndexModel
+@model UnitConversionApp.Pages.IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Unit Conversion";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>Unit Conversion</h2>
+
+<form method="post">
+    <div>
+        <label>Input Value:</label>
+        <input type="number" asp-for="InputValue" required />
+    </div>
+    <div>
+        <label>Input Unit:</label>
+        <select asp-for="InputUnit">
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Celsius">Celsius</option>
+            <option value="Kelvin">Kelvin</option>
+            <option value="Rankine">Rankine</option>
+        </select>
+    </div>
+    <div>
+        <label>Target Unit:</label>
+        <select asp-for="TargetUnit">
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Celsius">Celsius</option>
+            <option value="Kelvin">Kelvin</option>
+            <option value="Rankine">Rankine</option>
+        </select>
+    </div>
+    <div>
+        <label>Student Response:</label>
+        <input type="text" asp-for="StudentResponse" required />
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Result))
+{
+    <p>Result: <strong>@Model.Result</strong></p>
+}
