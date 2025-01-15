@@ -1,4 +1,3 @@
-```markdown
 # UnitConversionCS
 
 **UnitConversionCS** is a Razor-based web application that allows users to convert values between various units of measurement. It provides a simple and intuitive interface to perform unit conversions, making it a useful tool for students and professionals alike.
@@ -21,7 +20,7 @@ The app's user interface consists of the following elements:
 
 ### Example UI:
 
-```
+
 Unit Conversion
 Input Value: 0
 Input Unit: Fahrenheit
